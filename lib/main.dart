@@ -12,14 +12,21 @@ class ExpensesApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(),
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-        colorScheme: ColorScheme.fromSwatch().copyWith(
-          secondary: Colors.amber,
-        ),
-      ),
-    );
+        home: MyHomePage(),
+        theme: ThemeData(
+          primarySwatch: Colors.purple,
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+            secondary: Colors.amber,
+          ),
+          fontFamily: 'Quicksan',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                headline6: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+        ));
   }
 }
 
@@ -64,7 +71,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Despesas Pessoais'),
+        title: Text(
+          'Despesas Pessoais',
+          style: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 20,
+          ),
+        ),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
