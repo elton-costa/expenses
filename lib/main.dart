@@ -17,14 +17,19 @@ class ExpensesApp extends StatelessWidget {
         home: MyHomePage(),
         theme: ThemeData(
           primarySwatch: Colors.purple,
-          colorScheme: ColorScheme.fromSwatch().copyWith(
-            secondary: Colors.amber,
-          ),
+          accentColor: Colors.amber,
+          // colorScheme: ColorScheme.fromSwatch().copyWith(
+          //   secondary: Colors.amber,
+          // ),
           fontFamily: 'Quicksan',
           textTheme: ThemeData.light().textTheme.copyWith(
                 headline6: TextStyle(
                   fontFamily: 'OpenSans',
                   fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                button: TextStyle(
+                  color: Colors.white,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -54,8 +59,26 @@ class _MyHomePageState extends State<MyHomePage> {
     Transaction(
       id: 't2',
       title: 'Conta de Luz',
-      value: 212.70,
+      value: 10212.70,
       date: DateTime.now().subtract(Duration(days: 4)),
+    ),
+    Transaction(
+      id: 't3',
+      title: 'Conta de Cel',
+      value: 50.59,
+      date: DateTime.now().subtract(Duration(days: 4)),
+    ),
+    Transaction(
+      id: 't4',
+      title: 'Cartão de crédito',
+      value: 72.03,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't5',
+      title: 'Boleto compras',
+      value: 7.77,
+      date: DateTime.now(),
     ),
   ];
 
