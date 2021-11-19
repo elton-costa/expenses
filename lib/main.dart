@@ -89,7 +89,7 @@ class _MyHomePageState extends State<MyHomePage> {
         'Despesas Pessoais',
         style: TextStyle(
           fontFamily: 'OpenSans',
-          fontSize: 20,
+          fontSize: 20 * MediaQuery.of(context).textScaleFactor,
         ),
       ),
       actions: [
